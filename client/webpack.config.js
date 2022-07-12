@@ -27,11 +27,12 @@ module.exports = () => {
         swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
-        name: 'Just Another Text Editor',
         inject: true,
+        name: 'Just Another Text Editor',
         short_name: 'JATE',
         description: 'Your own text editor, but through your browser!',
         background_color: '#202020',
+        start_url: '/',
         publicPath: '/',
         icons: [
           {
