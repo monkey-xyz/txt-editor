@@ -19,16 +19,30 @@ module.exports = () => {
     },
     plugins: [
       new HtmlWebpackPlugin({
-
+        template: './index.html',
+        title: 'Just Another Text Editor'
       }),
       new GenerateSW({
 
       }),
       new InjectManifest({
-
+        swSrc: './src-sw.js',
+        swDest: 'src-sw.js'
       }),
       new WebpackPwaManifest({
-
+        name: 'Just Another Text Editor',
+        inject: true,
+        short_name: 'JATE',
+        description: 'Your own text editor, but through your browser!',
+        background_color: '#202020',
+        publicPath: '/',
+        icons: [
+          {
+            src: path.resolve('src/assets/logo.png'),
+            sizes: [96, 128, 192, 256, 384, 512],
+            destination: path.join('assets', 'icons'),
+          },
+        ]
       }),
     ],
 
