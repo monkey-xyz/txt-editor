@@ -10,6 +10,8 @@ This is a simple, pre-built browser text editor that functions as a **P**rogress
 
 `npm i`
 
+`npm run build`
+
 `npm run client`
 
 Through the Heroku app, no commands need to be run and the app can be used just by typing into the editor.
